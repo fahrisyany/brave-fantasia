@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/public/battle2.css" />
+
+
+</head>
+
+<body>
+
+    <header class="head">
+        <h1 id="title">Brave Fantasia</h1>
+        <nav>
+            <br>
+            <br>
+            <a href="/">Home</a>
+            <a href="#" id="myBtn">Login</a>
+            <a href="/Users/adefahrisyany/Desktop/CSS%20Library/header/video_background/account/index.html" id="myBtn ">/Your Account/</a>
+            <a href="#">How to play</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="card" id="player1" style="width:250px">
+
+            <img class="card-img-top" id='animationLeader1' src="<%=champion1.image%>" alt="Card image" style="width:100%">
+            <div class="card-body">
+                <br> Name:
+                <input id="champion1_name" type="text" value="<%=champion1.name%>" readonly>
+                <br> element
+                <input id="champion1_element" type="text" value="<%=champion1.element%>" readonly maxlength="8" size="8">
+                <br>effect
+                <input id="champion1_effect" type="text" value="<%=champion1.effect%>" readonly>
+                <br>
+            </div>
+
+        </div>
+
+        <div class="card" id="player1" style="width:350px">
+
+            <img class="card-img-top" id='animationMonster1' src="<%= monsters1.image %>" alt="Card image" style="width:100%">
+            <div class="card-body">
+                <br> Name:
+                <input id="monsterPlayer1_name" type="text" value="<%=monsters1.name%>" readonly>
+                <br> Health
+                <input id="monsterPlayer1_health" type="text" value="<%=monsters1.health%>" readonly maxlength="4" size="4">
+                <progress id="health1" value="<%=monsters1.health%>" max="<%=monsters1.health%>"></progress>
+                <br> element
+                <input id="monsterPlayer1_element" type="text" value="<%=monsters1.element%>" readonly maxlength="8" size="8">
+                <br> attack
+                <input id="monsterPlayer1_attack" type="text" value="<%=monsters1.attack%>" readonly maxlength="4" size="4">
+                <br> defense
+                <input id="monsterPlayer1_defense" type="text" value="<%=monsters1.defense%>" readonly maxlength="4" size="4">
+                <br> agility
+                <input id="monsterPlayer1_agility" type="text" value="<%=monsters1.agility%>" readonly maxlength="4" size="4">
+                <br>effect
+                <input id="monsterPlayer1_effect" type="text" value="<%=monsters1.effect%>" readonly>
+                <br>
+                <p></p>
+                <button type="button" class="btn btn-success">Hellfire</button>
+                <button type="button" class="btn btn-success">delirium</button>
+                <br>
+                <button type="button" class="btn btn-success">soul eater</button>
+                <button type="button" class="btn btn-success">salted earth</button>
+
+
+
+
+            </div>
+
+        </div>
+
+        <div class="center">
+            <button id="attack" class="bubbly-button" value="sound" onclick="engage(id)">Engage</button>
+        </div>
+
+        <div class="card" id="player2" style="width:350px;">
+
+            <img class="card-img-bottom" id='animationMonster2' src="<%= monsters2.image %>" alt="Card image" style="width:100%">
+            <div class="card-body">
+                <br> Name:
+                <input id="monsterPlayer2_name" type="text" value="<%=monsters2.name%>" readonly>
+                <br> Health
+                <input id="monsterPlayer2_health" type="text" value="<%=monsters2.health%>" readonly maxlength="6" size="4">
+                <progress id="health2" value="<%=monsters2.health%>" max="<%=monsters2.health%>"></progress>
+                <br> element
+                <input id="monsterPlayer2_element" type="text" value="<%=monsters2.element%>" readonly maxlength="8" size="8">
+                <br> attack
+                <input id="monsterPlayer2_attack" type="text" value="<%=monsters2.attack%>" readonly maxlength="4" size="4">
+                <br> defense
+                <input id="monsterPlayer2_defense" type="text" value="<%=monsters2.defense%>" readonly maxlength="4" size="4">
+                <br> agility
+                <input id="monsterPlayer2_agility" type="text" value="<%=monsters2.agility%>" readonly maxlength="4" size="4">
+                <br>effect
+                <input id="monsterPlayer2_effect" type="text" value="<%=monsters2.effect%>" readonly>
+                <br>
+            </div>
+        </div>
+        <div class="card" id="player2" style="width:250px;">
+
+            <img class="card-img-bottom" id='animationLeader2' src="<%=champion2.image%>" alt="Card image" style="width:100%;">
+            <div class="card-body">
+                <br> Name:
+                <input id="champion2_name" type="text" value="<%=champion2.name%>" readonly>
+                <br> element
+                <input id="champion2_element" type="text" value="<%=champion2.element%>" readonly maxlength="8" size="8">
+                <br>effect
+                <input id="champion2_effect" type="text" value="<%=champion2.effect%>" readonly>
+                <br>
+            </div>
+        </div>
+    </div>
+    <script src="/public/battle.js"></script>
+
+</body>
+
+</html>
